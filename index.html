@@ -552,8 +552,13 @@ footer{
       <p class="hero-desc">Java Backend Developer with hands-on experience in building scalable backend systems using Java, Spring Boot, and REST APIs. Currently working as a Software Development Instructor at Trainx, teaching Java and Data Structures & Algorithms. Experienced in Microsoft Graph API integration, duplicate data processing, and backend performance optimization. Strong foundation in OOP, Data Structures, and database management with a focus on clean and maintainable code.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
-        <a href="#" onclick="viewResume()" class="btn btn-outline"><i class="fas fa-eye"></i> View Resume</a>
-        <a href="sachin_resume_.pdf" download="sachin_resume_.pdf" class="btn btn-outline"></a>
+       <a href="sachin_resume_.pdf" target="_blank" class="btn btn-outline">
+    <i class="fas fa-eye"></i> View Resume
+</a>
+
+<a href="sachin_resume_.pdf" download="sachin_resume_.pdf" class="btn btn-outline">
+    <i class="fas fa-download"></i> Download Resume
+</a>
         <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
       </div>
       <div class="hero-stats">
@@ -1228,23 +1233,7 @@ async function handleFormSubmit() {
 }
 
 // VIEW RESUME
-function viewResume() {
-  const a = document.querySelector('a[download="Sachin_Raghav_Resume.pdf"]');
-  const pdfUrl = a ? a.href : null;
-  if (!pdfUrl) return;
-  const w = window.open('', '_blank');
-  w.document.write(`<!DOCTYPE html><html><head><title>Sachin Raghav - Resume</title>
-  <style>*{margin:0;padding:0;box-sizing:border-box;}body{background:#1a1a2e;display:flex;flex-direction:column;align-items:center;min-height:100vh;font-family:sans-serif;}
-  .bar{width:100%;background:#0a0f2e;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,229,255,0.2);}
-  .bar span{color:#00e5ff;font-weight:700;font-size:1rem;}
-  .bar a{background:linear-gradient(135deg,#00e5ff,#7c3aed);color:#fff;padding:8px 20px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;}
-  iframe{width:100%;max-width:900px;height:calc(100vh - 60px);border:none;margin-top:0;}
-  </style></head><body>
-  <div class="bar"><span>📄 Sachin Raghav — Resume</span><a href="${pdfUrl}" download="Sachin_Raghav_Resume.pdf">⬇ Download</a></div>
-  <iframe src="${pdfUrl}"></iframe>
-  </body></html>`);
-  w.document.close();
-}
+
 
 // COUNTER ANIMATION
 function animateCounter(el, target, suffix) {
